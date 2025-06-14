@@ -1,22 +1,16 @@
-/* إعدادات الخط */
 body {
   font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.8;
   background-color: #f9f9f9;
   color: #222;
 }
-
-/* الحاوية العامة */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
-
-/* الأقسام */
 .section {
   padding: 60px 0;
 }
@@ -24,80 +18,67 @@ body {
   background-color: #1c1c1c;
   color: #eee;
 }
-
-/* الهيدر */
 header {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://images.unsplash.com/photo-1612198242766-607dafe1c41e?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 40px;
 }
-header p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-/* الأزرار */
 .btn {
   background-color: #ff6b00;
   color: white;
   padding: 12px 28px;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
   display: inline-block;
-  transition: 0.3s;
+  margin: 5px;
 }
-.btn:hover {
-  background-color: #e95c00;
+.btn.secondary {
+  background-color: #333;
 }
-.btn.small {
-  padding: 8px 20px;
-  font-size: 14px;
-}
-
-/* البطاقات */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 .game-card {
-  background-color: #fff;
-  color: #000;
-  border-radius: 10px;
+  background-color: #000000;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
   text-align: center;
 }
-.section.dark .game-card {
-  background-color: #2a2a2a;
-  color: #fff;
+input, select, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
-
-/* التواصل */
-.contact-info {
-  list-style: none;
-  padding: 0;
-  font-size: 18px;
+button {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
-.contact-info li {
-  margin-bottom: 12px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
 }
-.contact-info a {
-  color: #ff6b00;
-  text-decoration: none;
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
-.contact-info a:hover {
-  text-decoration: underline;
+table th {
+  background-color: #ff6b00;
+  color: white;
 }
-
-/* الفوتر */
 footer {
   background-color: #000;
   color: #aaa;
@@ -105,3 +86,4 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+
