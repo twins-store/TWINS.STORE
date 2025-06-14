@@ -9,65 +9,91 @@
 </head>
 <body>
 
+  <!-- تسجيل الدخول في أعلى الصفحة -->
+  <section id="login" class="section">
+    <div class="container">
+      <h2>🔐 تسجيل الدخول</h2>
+      <input type="text" id="username" placeholder="اسم المستخدم">
+      <input type="password" id="password" placeholder="كلمة المرور">
+      <button onclick="login()">دخول</button>
+      <p id="login-error" style="color:red; display:none;">❌ اسم المستخدم أو كلمة المرور غير صحيحة</p>
+    </div>
+  </section>
+
   <!-- رأس الصفحة -->
   <header>
     <div class="container">
       <h1>TWINS STORE</h1>
       <p>أفضل منصة لشحن الألعاب داخل مصر والعالم العربي</p>
       <a href="#games" class="btn">ابدأ الآن</a>
+      <a href="#login" class="btn secondary">تسجيل الدخول</a>
+      <a href="#prices" class="btn secondary">الأسعار</a>
+      <a href="#order" class="btn secondary">طلب جديد</a>
+      <a href="#dashboard" class="btn secondary">لوحة التحكم</a>
     </div>
   </header>
-
-  <!-- قسم من نحن -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>من نحن؟</h2>
-      <p>
-        TWINS STORE هو موقع متخصص في تقديم خدمات شحن الألعاب بأسعار تنافسية وسرعة فائقة. نحن نوفر لك تجربة سهلة وآمنة
-        لشحن رصيدك في أشهر الألعاب.
-      </p>
-    </div>
-  </section>
 
   <!-- قسم الألعاب -->
   <section id="games" class="section dark">
     <div class="container">
       <h2>الألعاب المدعومة</h2>
       <div class="games-grid">
-        <div class="game-card">
-          <h3>Free Fire</h3>
-          <p>شحن فوري لجواهر فري فاير</p>
-          <a href="#contact" class="btn small">اطلب الآن</a>
-        </div>
-        <div class="game-card">
-          <h3>PUBG Mobile</h3>
-          <p>شحن UC لجميع السيرفرات</p>
-          <a href="#contact" class="btn small">اطلب الآن</a>
-        </div>
-        <div class="game-card">
-          <h3>Call of Duty</h3>
-          <p>شحن CP خلال دقائق</p>
-          <a href="#contact" class="btn small">اطلب الآن</a>
-        </div>
-        <div class="game-card">
-          <h3>socialmedia</h3>
-          <p>تزويد خدمات السوشيال ميديا</p>
-          <a href="#contact" class="btn small">اطلب الآن</a>
-        </div>
+        <div class="game-card"><h3>Free Fire</h3><p>شحن فوري لجواهر فري فاير</p></div>
+        <div class="game-card"><h3>PUBG Mobile</h3><p>شحن UC لجميع السيرفرات</p></div>
+        <div class="game-card"><h3>Call of Duty</h3><p>شحن CP خلال دقائق</p></div>
+        <div class="game-card"><h3>Social Media</h3><p>تزويد متابعين ومشاهدات</p></div>
       </div>
     </div>
   </section>
 
-  <!-- قسم التواصل -->
-  <section id="contact" class="section">
+  <!-- الأسعار -->
+  <section id="prices" class="section">
     <div class="container">
-      <center>
-      <h2>تواصل معنا</h2>
-      <p>للطلبات أو الاستفسارات:</p>
-      <ul class="contact-info">
-        <li>📱 <a href="https://wa.me/201091569465" target="_blank">1-واتساب مباشر</a></li>
-         <li>📱 <a href="https://wa.me/201064310960" target="_blank">2-واتساب مباشر</a></li>
-      </center>
+      <h2>💰 قائمة الأسعار</h2>
+      <table>
+        <thead><tr><th>الخدمة</th><th>الكمية</th><th>السعر</th></tr></thead>
+        <tbody>
+          <tr><td>Free Fire</td><td>110 جوهرة</td><td>65 جنيه</td></tr>
+          <tr><td>PUBG</td><td>30 شده</td><td>35 جنيه</td></tr>
+          <tr><td>Tiktok</td><td>10000 view</td><td>20 جنيه</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- نموذج الطلب -->
+  <section id="order" class="section">
+    <div class="container">
+      <h2>📋 نموذج الطلب</h2>
+      <form id="orderForm">
+        <input type="text" id="name" placeholder="اسمك الكامل" required>
+        <input type="text" id="whatsapp" placeholder="رقم الواتساب" required>
+        <select id="service" required>
+          <option value="">-- اختر الخدمة --</option>
+          <option value="Free Fire">Free Fire</option>
+          <option value="PUBG">PUBG</option>
+          <option value="Social Media">Social Media</option>
+        </select>
+        <input type="number" id="amount" placeholder="الكمية" required>
+        <textarea id="notes" rows="4" placeholder="ملاحظات إضافية (انظر لوحه التحكم)"></textarea>
+        <button type="submit">إرسال الطلب على واتساب</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- لوحة التحكم -->
+  <section id="dashboard" class="section">
+    <div class="container">
+      <h2>📊 لوحة التحكم</h2>
+      <ul>
+        <h2>شحن عبر الحساب </h2>
+        <li>طلب 1:يجب عليك ادخال الايميل</li>
+        <li>طلب 2:يحب عليك ادخال الباسورد </li>
+        <h2>شحن عبر الID</h2>
+        <li>يجب عليك  اضافه الID</lI>
+        <h2>لتزويد السوشيال ميديا </h2>
+        <li>ضيف لينك الفيديو <li>
+        <li>ضيف اسم المستخدم</li>
       </ul>
     </div>
   </section>
@@ -75,9 +101,43 @@
   <!-- الفوتر -->
   <footer>
     <div class="container">
-      <p>© All rights reserved to TWINS STORE</p>
+      <p>© جميع الحقوق محفوظة لـ TWINS STORE</p>
     </div>
   </footer>
+
+  <!-- سكربت الحماية -->
+  <script>
+    let loggedIn = false;
+
+    function login() {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      if (u === 'admin' && p === '1234') {
+        loggedIn = true;
+        alert('✅ تم تسجيل الدخول بنجاح!');
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      if (!loggedIn) {
+        e.preventDefault();
+        alert('❌ يجب تسجيل الدخول أولاً قبل إرسال الطلب.');
+        return;
+      }
+
+      const name = document.getElementById('name').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const service = document.getElementById('service').value;
+      const amount = document.getElementById('amount').value;
+      const notes = document.getElementById('notes').value;
+
+      const message = `مرحباً، أنا ${name}%0Aأرغب في طلب خدمة: ${service}%0Aالكمية: ${amount}%0Aرقم الواتساب: ${whatsapp}%0Aملاحظات: ${notes}`;
+      const url = `https://wa.me/201091569465?text=${message}`;
+      window.open(url, '_blank');
+    });
+  </script>
 
 </body>
 </html>
